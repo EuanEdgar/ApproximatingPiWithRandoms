@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Approximating PI with random numbers</title>
+    <script async src="/js/interface.js"></script>
+    <script async src="/js/approximator.js"></script>
+    <script async src="/js/random.js"></script>
+    <script async src="/js/main.js"></script>
+
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Approximating PI with random numbers</h1>
+    <div id="app">
+      <div>
+        <label>
+          Minimum value:
+          <input type="number" name="minVal" value="1" />
+        </label>
+        <label>
+          Maximim value:
+          <input type="number" name="maxVal" value="120" />
+        </label>
+        <label>
+          Number of itterations (0 for infinite):
+          <input type="number" name="itterCount" value="500" />
+        </label>
+        <label>
+          Itterations per display update:
+          <input type="number" name="displayInterval" value="10" />
+        </label>
+        <button value="toggleRunning">Go</button>
+      </div>
+
+      <div>
+        <h2>Current approximation</h2>
+        <p id="currentApproximation">-</p>
+        <p>Itteration <span id="itterationCount">0</span></p>
+      </div>
+    </div>
+  </body>
+</html>
